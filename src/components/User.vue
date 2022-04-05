@@ -7,7 +7,7 @@
             <div class="card-body">
               <p class="card-title float-left"><b>Data User</b></p>
               <p class="card-description float-right">
-                <b-button size="sm" variant="success" v-b-modal.modal-user v-on:click="Add()"><i class="mdi mdi-plus btn-icon-prepend"></i>
+                <b-button size="sm" variant="success" v-b-modal.modal-user @click="Add()"><i class="mdi mdi-plus btn-icon-prepend"></i>
                   Tambah</b-button>
               </p>
               <div class="table-responsive">
@@ -141,6 +141,9 @@ module.exports = {
       this.username = "";
       this.password = "";
       this.role = "";
+
+      this.getOutletDropdown();
+
     },
 
     Edit : function(item){
@@ -150,6 +153,8 @@ module.exports = {
       this.nama = item.nama;
       this.username = item.username;
       this.role = item.role;
+
+      this.getOutletDropdown();
     },
 
     Save : function(){
@@ -206,7 +211,6 @@ module.exports = {
   mounted(){
     this.key = this.$cookies.get("Authorization");
     this.getData();
-    this.getOutletDropdown();
   }
 }
 </script>

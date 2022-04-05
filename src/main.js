@@ -1,4 +1,4 @@
-var base_url = "http://localhost:8000/api";
+var base_url = "http://localhost:8001/api";
 var router = [
   { path: "/", name: "Beranda", component: httpVueLoader("./src/components/Beranda.vue")},
   { path: "/home", name: "Home", component: httpVueLoader("./src/components/Beranda.vue")},
